@@ -1,0 +1,123 @@
+1) reverse 
+
+  #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int num,digit,rem=0;
+    scanf("%d",&num);
+    while(num!=0)
+    {
+      digit=num%10;
+        rem=rem*10+digit;
+        num/=10;
+    }
+    printf("%d",rem);
+    return 0;
+}
+
+2) amstrong number
+
+  #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int num,res=0,digit,count=0,num1,num2,div=100;
+    scanf("%d",&num);
+    num1=num;
+    num2=num;
+    while(num!=0)
+    {
+        num/=10;
+        count++;
+    }
+    while(num1!=0)
+    {
+        digit=num1/div;
+        res+=pow(digit,count);
+        num1%=div;
+        div/=10;
+    }
+    if(num2==res)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+    return 0;
+}
+
+3) prime number
+
+  #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int start,end;
+    scanf("%d %d",&start,&end);
+    while(start<=end)
+    {
+       int num=2,flag=0;
+        while(num<start)
+        {
+            if(start%num==0)
+            {
+                flag=1;
+            }
+            num++;
+        }
+        if(flag==0)
+        {
+            if(start%1==0)
+            {
+                if(start%start==0)
+                {
+                    printf("%d ",start);
+                }
+            }
+        }
+        start++;
+    }
+    
+    return 0;
+}
+
+4) small array 
+
+  #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int arr[5], i, temp;
+    for(i=0; i<5; i++)
+        scanf("%d", &arr[i]);
+    for(i=0; i<5; i++)
+    {
+        for(int j=i+1;j<5;j++)
+        {
+            if (arr[i]>arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    for(i=0; i<2;i++)
+        printf("%d ",arr[i]);
+    return 0;
+}
