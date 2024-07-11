@@ -229,3 +229,95 @@ int main()
 
 9) Insert the value at given position 
 
+#include <stdio.h>
+
+int main()
+{
+    int n,i,pos,val,j,k,a[100];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Enter the position:");
+    scanf("%d",&pos);
+    printf("Enter the value:");
+    scanf("%d",&val);
+    for(j=n;j>=pos;j--)
+    {
+        for(k=j+1;k>j;k--)
+        {
+            a[k]=a[j];
+        }
+    }
+    a[pos]=val;
+    n+=1;
+    for(i=0;i<n;i++)
+    {
+        printf("%d\t",a[i]);
+    }
+
+    return 0;
+}
+
+
+10) Delete element from the position
+
+#include <stdio.h>
+
+int main()
+{
+    int n,i,p;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Enter the position to be delete:");
+    scanf("%d",&p);
+    for(i=0;i<n;i++)
+    {
+        if(i>=p)
+        {
+            a[i]=a[i+1];
+        }
+    }
+    for(i=0;i<n-1;i++)
+    {
+        printf("%d\t",a[i]);
+    }
+
+    return 0;
+}
+
+11) Swapping pair of ajcent element in array
+
+#include <stdio.h>
+
+int main()
+{
+    int n,i,j,temp;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n-1;i+=2)
+    {
+        temp=a[i];
+        a[i]=a[i+1];
+        a[i+1]=temp;
+        
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d  ",a[i]);
+    }
+
+    return 0;
+}
+
+12) Left rotate of the given times of array
+
