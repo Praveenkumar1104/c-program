@@ -23,7 +23,7 @@ int main() {
         for (col = 0; col < n; col++) {
             row_sum[row] += a[row][col];
         }
-        if (row_sum[row] > max_sum) {
+        if (max_sum<row_sum[row]) {
             max_sum = row_sum[row];
         }
     }
