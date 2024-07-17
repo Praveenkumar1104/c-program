@@ -27,7 +27,7 @@ int main() {
     printf("%d",count);
     return 0;
 }
-
+------------------------------------------------------------------------
 2) Rotate of an array
 
   #include <stdio.h>
@@ -61,7 +61,7 @@ int main() {
     }
     return 0;
 }
-
+-----------------------------------------------------------------------------
 3) kth largest number
 
   #include <stdio.h>
